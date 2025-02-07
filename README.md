@@ -1,3 +1,6 @@
+# fork av [navikt/nav-faker](https://github.com/navikt/nav-faker), bare oppgradert til bedre typescript og mye bedre build pipeline ved bruk av bun
+
+
 # nav-faker [![npm version](https://badge.fury.io/js/nav-faker.svg)](https://badge.fury.io/js/nav-faker) [![Build status](https://github.com/navikt/nav-faker/workflows/Test,%20build%20and%20publish/badge.svg?branch=master)](https://github.com/navikt/nav-faker/actions?query=workflow%3A%22Test%2C+build+and+publish%22)
 
 nav-faker er et lite bibliotek som lar deg generere opp norske testdata. Biblioteket er under utvikling.
