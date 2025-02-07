@@ -1,5 +1,5 @@
 {
-  "name": "nav-faker",
+  "name": "@aulonm/nav-faker",
   "version": "1.0.10",
   "description": "Faker for å generere fødselsnummer, navn, og mer.",
   "type": "module",
