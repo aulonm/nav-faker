@@ -14,7 +14,9 @@
     "build": "bun build.ts",
     "test": "bun test",
     "lint": "bun biome check .",
-    "lint:ci": "bun biome ci ."
+    "lint:ci": "bun biome ci .",
+    "changeset:version": "bun run --bun changeset version",
+    "changeset:release": "bun run build && changeset publish"
   },
   "author": "",
   "license": "MIT",
