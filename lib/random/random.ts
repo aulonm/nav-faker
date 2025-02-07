@@ -1,7 +1,7 @@
 import seedrandom from 'seedrandom';
 
 class Random {
-  private randomGenerator: seedrandom.prng;
+  private randomGenerator: seedrandom.PRNG;
 
   constructor(seed?: string) {
     this.randomGenerator = seedrandom(seed);
