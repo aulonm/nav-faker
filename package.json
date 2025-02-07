@@ -2,11 +2,16 @@
   "name": "nav-faker",
   "version": "1.0.10",
   "description": "Faker for å generere fødselsnummer, navn, og mer.",
-  "main": "dist/index.js",
-  "files": ["/dist"],
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc && npm run lint",
+    "build": "bun build.ts",
     "test": "bun test",
     "lint": "bun biome check .",
     "lint:ci": "bun biome ci ."
@@ -14,6 +19,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@changesets/cli": "^2.27.12",
+    "bun-plugin-dts": "^0.3.0",
     "esm-seedrandom": "^3.0.5-esm.2"
   },
   "devDependencies": {

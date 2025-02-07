@@ -20,7 +20,7 @@ class Random {
     return this.randomNumber(parsedMin, parsedMax);
   }
 
-  public vektetSjanse(vekt: number) {
+  public weightedChange(vekt: number) {
     return this.randomGenerator.double() <= vekt;
   }
 

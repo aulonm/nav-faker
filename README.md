@@ -45,40 +45,30 @@ nav-faker har følgende moduler:
 ### Dato
 
 ```typescript
-    mellom(fra: Date, til: Date): Date;
-    forÅrSiden(årSiden: number): Date;
+    between(fra: Date, til: Date): Date;
 ```
 
 ### PersonIdentifikator
 
 ```typescript
-    fødselsnummer(fødselsdato?: Date, kjønn?: number): string;
-    dnummer(fødselsdato?: Date, kjønn?: number): string;
-    myndigFødselsnummer(kjønn?: number): string;
-    getFødselsdato(fødselsnummer: string): Date;
+    fnr(birthDate?: Date, sex?: number): string;
+    dNumber(birthDate?: Date, sex?: number): string;
+    validFnr(sex?: number): string;
+    getbirthDate(fødselsnummer: string): Date;
 ```
 
 ### Person
 
 ```typescript
-    kjønn(): number;
-    antallBarn(fødselsdato: Date): number;
+    sex(): number;
 ```
 
 ### Random
 
 ```typescript
     number(max?: number, min?: number): number;
-    vektetSjanse(vekt: number): boolean;
+    weightedChange(vekt: number): boolean;
 ```
-
-### Telefon
-
-```typescript
-    mobil(): string;
-    jobb(): string;
-```
-
 
 ## Bidra?
 
