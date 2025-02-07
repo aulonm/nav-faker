@@ -1,5 +1,11 @@
 # @aulonm/nav-faker
 
+## 2.0.1
+
+### Patch Changes
+
+- f137b84: Upgrade seedrandom to v3
+
 ## 2.0.0
 
 ### Major Changes
