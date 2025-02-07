@@ -1,61 +1,33 @@
 {
-  "name": "nav-faker",
+  "name": "@aulonm/nav-faker",
   "version": "1.0.10",
   "description": "Faker for å generere fødselsnummer, navn, og mer.",
-  "main": "dist/index.js",
-  "files": [
-    "/dist"
-  ],
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "build": "tsc && npm run lint",
-    "lint": "tslint lib/**/*.ts",
-    "commit": "git-cz"
+    "build": "bun build.ts",
+    "test": "bun test",
+    "lint": "bun biome check .",
+    "lint:ci": "bun biome ci ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "seedrandom": "^2.4.3"
+    "esm-seedrandom": "^3.0.5-esm.2"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
+    "@biomejs/biome": "1.9.4",
+    "@changesets/cli": "^2.27.12",
+    "@types/bun": "^1.2.2",
     "@types/seedrandom": "^2.4.27",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.4.2",
-    "cz-conventional-changelog": "^2.1.0",
-    "git-cz": "^3.2.1",
-    "jest": "^23.4.2",
-    "ts-jest": "^23.1.2",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "bun-plugin-dts": "^0.3.0",
+    "typescript": "^5.7.3"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsConfigFile": "tsconfig.json"
-      }
-    },
-    "testMatch": [
-      "**/*.test.+(ts|tsx|js)"
-    ],
-    "modulePathIgnorePatterns": [
-      "node_modules",
-      "dist"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }

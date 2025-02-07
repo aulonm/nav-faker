@@ -1,7 +1,8 @@
+import { expect, test } from 'bun:test';
 import { padLeftNumber } from './string-utils';
 
-test('Padder korrekt', () => {
-    const paddedString = padLeftNumber(5, 5);
+test('Correct padding', () => {
+  const paddedString = padLeftNumber(5, 5);
 
-    expect(paddedString).toEqual('00005');
+  expect(paddedString).toEqual('00005');
 });
