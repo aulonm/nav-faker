@@ -1,5 +1,11 @@
 # @aulonm/nav-faker
 
+## 2.0.2
+
+### Patch Changes
+
+- b3ba7d4: Rewritten the rest to english variables/functions
+
 ## 2.0.1
 
 ### Patch Changes
