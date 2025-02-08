@@ -57,7 +57,7 @@ nav-faker har følgende moduler:
     fnr(birthDate?: Date, sex?: number): string;
     dnr(birthDate?: Date, sex?: number): string;
     validFnr(sex?: number): string;
-    getbirthDate(fødselsnummer: string): Date;
+    getBirthDate(fødselsnummer: string): Date;
 ```
 
 ### Person

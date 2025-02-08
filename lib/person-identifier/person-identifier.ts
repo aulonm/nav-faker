@@ -1,7 +1,7 @@
 import type NavFaker from '../navfaker';
 import { fnrToDate } from './helpers/birth-date-calculator';
 import { getConfigOrDefault } from './helpers/config-helper';
-import FødselsnummerBeregner from './helpers/fnr-calculator';
+import FnrCalculator from './helpers/fnr-calculator';
 
 export enum Sex {
   WOMEN = 0,
@@ -21,7 +21,7 @@ class PersonIdentifier {
       { birthDate, sex },
       false,
     );
-    return new FødselsnummerBeregner(this.faker, parsedOptions).randomFnr();
+    return new FnrCalculator(this.faker, parsedOptions).randomFnr();
   }
 
   public dnr(birthDate?: Date, sex?: number): string {
@@ -30,7 +30,7 @@ class PersonIdentifier {
       { birthDate, sex },
       true,
     );
-    return new FødselsnummerBeregner(this.faker, parsedOptions).randomFnr();
+    return new FnrCalculator(this.faker, parsedOptions).randomFnr();
   }
 
   public adultFnr(sex?: number): string {
@@ -43,12 +43,12 @@ class PersonIdentifier {
     return this.fnr(birthDate, sex);
   }
 
-  public getbirthDate(fnr: string): Date {
+  public getBirthDate(fnr: string): Date {
     return fnrToDate(fnr);
   }
 
   public getAge(fnr: string): number {
-    const birthDate = this.getbirthDate(fnr);
+    const birthDate = this.getBirthDate(fnr);
     return (
       new Date(new Date().getTime() - birthDate.getTime()).getFullYear() - 1970
     );

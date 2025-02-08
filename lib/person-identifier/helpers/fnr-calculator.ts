@@ -66,7 +66,7 @@ class FnrCalculator {
       );
   }
 
-  private getIndividualNumbersForYear() {
+  public getIndividualNumbersForYear() {
     const year = this.options.birthDate.getFullYear();
 
     if (isBetween(year, 1854, 1899)) {

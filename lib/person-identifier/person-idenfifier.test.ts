@@ -11,7 +11,7 @@ test('Generate valid fnr', () => {
 test('Generate adult fnr', () => {
   const fnr = navfaker.personIdentifier.adultFnr();
 
-  const birthDate = navfaker.personIdentifier.getbirthDate(fnr);
+  const birthDate = navfaker.personIdentifier.getBirthDate(fnr);
   const age =
     new Date(new Date().getTime() - birthDate.getTime()).getFullYear() - 1970;
 
@@ -21,7 +21,7 @@ test('Generate adult fnr', () => {
 });
 
 test('Parse birthDate', () => {
-  const birthDate = navfaker.personIdentifier.getbirthDate('10108000398');
+  const birthDate = navfaker.personIdentifier.getBirthDate('10108000398');
 
   expect(birthDate.getFullYear()).toEqual(1980);
   expect(birthDate.getDate()).toEqual(10);
