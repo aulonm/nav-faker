@@ -1,5 +1,11 @@
 # @aulonm/nav-faker
 
+## 2.1.0
+
+### Minor Changes
+
+- 65370f8: add getAge function for fnr
+
 ## 2.0.2
 
 ### Patch Changes
