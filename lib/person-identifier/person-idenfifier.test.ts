@@ -39,3 +39,12 @@ describe('d-number', () => {
     expect(isValidFnr(dnr)).toEqual(true);
   });
 });
+
+describe('get age from fnr', () => {
+  test('Get age from fnr', () => {
+    const fnr = '10108000398';
+    const age = navfaker.personIdentifier.getAge(fnr);
+
+    expect(age).toEqual(44);
+  });
+});

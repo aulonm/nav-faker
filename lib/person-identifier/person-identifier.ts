@@ -46,6 +46,13 @@ class PersonIdentifier {
   public getbirthDate(fnr: string): Date {
     return fnrToDate(fnr);
   }
+
+  public getAge(fnr: string): number {
+    const birthDate = this.getbirthDate(fnr);
+    return (
+      new Date(new Date().getTime() - birthDate.getTime()).getFullYear() - 1970
+    );
+  }
 }
 
 export default PersonIdentifier;
