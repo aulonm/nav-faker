@@ -1,5 +1,11 @@
 # @aulonm/nav-faker
 
+## 2.1.1
+
+### Patch Changes
+
+- 1a68c87: minor fixes
+
 ## 2.1.0
 
 ### Minor Changes
