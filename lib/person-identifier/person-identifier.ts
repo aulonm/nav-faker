@@ -24,7 +24,7 @@ class PersonIdentifier {
     return new FødselsnummerBeregner(this.faker, parsedOptions).randomFnr();
   }
 
-  public dNumber(birthDate?: Date, sex?: number): string {
+  public dnr(birthDate?: Date, sex?: number): string {
     const parsedOptions = getConfigOrDefault(
       this.faker,
       { birthDate, sex },
@@ -33,7 +33,7 @@ class PersonIdentifier {
     return new FødselsnummerBeregner(this.faker, parsedOptions).randomFnr();
   }
 
-  public myndigFødselsnummer(sex?: number): string {
+  public adultFnr(sex?: number): string {
     const maxAlder = new Date();
     maxAlder.setFullYear(maxAlder.getFullYear() - 100, 0, 1);
     const minAlder = new Date();

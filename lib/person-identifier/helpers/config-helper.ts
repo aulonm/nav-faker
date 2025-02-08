@@ -8,7 +8,7 @@ interface UserOptions {
 export function getConfigOrDefault(
   navFaker: NavFaker,
   options: UserOptions,
-  isDNumber: boolean,
+  isDnr: boolean,
 ) {
   let birthDate = options.birthDate;
   let sex = options.sex;
@@ -20,7 +20,7 @@ export function getConfigOrDefault(
     sex = navFaker.person.sex();
   }
   return {
-    isDNumber,
+    isDnr,
     birthDate,
     sex,
   };

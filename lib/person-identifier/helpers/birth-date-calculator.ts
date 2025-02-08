@@ -1,5 +1,5 @@
 import { padLeft } from '../../utils/string-utils';
-import { isDNumber } from './fnr-utils';
+import { isDnr } from './fnr-utils';
 
 export function fnrToDate(fnr: string): Date {
   if (fnr.length !== 11) {
@@ -15,7 +15,7 @@ export function fnrToDate(fnr: string): Date {
 
 function getDay(fnr: string): string {
   let day = Number(fnr.substring(0, 2));
-  if (isDNumber(fnr)) {
+  if (isDnr(fnr)) {
     day = day - 40;
   } else if (day >= 72) {
     throw Error(`Fnr is not in correct format: ${fnr}`);

@@ -22,17 +22,15 @@ function calculateCheckDigit(fnr: string, multiplierTable: number[]): number {
   return remainder === 0 ? 0 : 11 - remainder;
 }
 
-export function isDNumber(fnr: string) {
-  const dag = Number(fnr.substring(0, 2));
-  return dag > 40 && dag <= 71;
+export function isDnr(fnr: string) {
+  const day = Number(fnr.substring(0, 2));
+  return day > 40 && day <= 71;
 }
 
 export function isValidFnr(fnr: string) {
   if (fnr.length !== 11) {
     return false;
   }
-
-  console.log(fnr);
 
   const k1 = Number(fnr.charAt(9));
   const k2 = Number(fnr.charAt(10));

@@ -55,7 +55,7 @@ nav-faker har følgende moduler:
 
 ```typescript
     fnr(birthDate?: Date, sex?: number): string;
-    dNumber(birthDate?: Date, sex?: number): string;
+    dnr(birthDate?: Date, sex?: number): string;
     validFnr(sex?: number): string;
     getbirthDate(fødselsnummer: string): Date;
 ```

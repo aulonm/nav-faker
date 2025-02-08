@@ -6,7 +6,7 @@ import { calculateCheckDigit1, calculateCheckDigit2 } from './fnr-utils';
 export interface Options {
   birthDate: Date;
   sex: Sex;
-  isDNumber: boolean;
+  isDnr: boolean;
 }
 
 function isBetween(tall: number, min: number, max: number) {
@@ -45,7 +45,7 @@ class FnrCalculator {
         this.faker.random.integer(validPersonalIdentificationNumbers.length - 1)
       ];
 
-    const adjustedBirthDate = this.adjustBirthDateForDNumber();
+    const adjustedBirthDate = this.adjustBirthDateForDnr();
 
     const k1 = calculateCheckDigit1(adjustedBirthDate + randomIndividualNumber);
 
@@ -90,7 +90,7 @@ class FnrCalculator {
   }
 
   private validControlDigits(personalIdentificationDigit: string) {
-    const birthDate = this.adjustBirthDateForDNumber();
+    const birthDate = this.adjustBirthDateForDnr();
     const personalId = birthDate + personalIdentificationDigit;
     const k1 = calculateCheckDigit1(personalId);
 
@@ -105,9 +105,9 @@ class FnrCalculator {
     return true;
   }
 
-  private adjustBirthDateForDNumber(): string {
+  private adjustBirthDateForDnr(): string {
     const birthDate = dateFromString(this.options.birthDate);
-    if (!this.options.isDNumber) {
+    if (!this.options.isDnr) {
       return birthDate;
     }
     const firstDigit = Number(birthDate.charAt(0)) + 4;

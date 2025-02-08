@@ -9,7 +9,7 @@ test('Generate valid fnr', () => {
 });
 
 test('Generate adult fnr', () => {
-  const fnr = navfaker.personIdentifier.myndigFødselsnummer();
+  const fnr = navfaker.personIdentifier.adultFnr();
 
   const birthDate = navfaker.personIdentifier.getbirthDate(fnr);
   const age =
@@ -30,12 +30,12 @@ test('Parse birthDate', () => {
 
 describe('d-number', () => {
   test('Create d-number', () => {
-    const dNumber = navfaker.personIdentifier.dNumber();
-    const førsteSiffer = Number(dNumber.charAt(0));
+    const dnr = navfaker.personIdentifier.dnr();
+    const førsteSiffer = Number(dnr.charAt(0));
 
-    expect(dNumber.length).toEqual(11);
+    expect(dnr.length).toEqual(11);
     expect(førsteSiffer).toBeGreaterThanOrEqual(4);
     expect(førsteSiffer).toBeLessThanOrEqual(7);
-    expect(isValidFnr(dNumber)).toEqual(true);
+    expect(isValidFnr(dnr)).toEqual(true);
   });
 });
