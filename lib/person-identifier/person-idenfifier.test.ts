@@ -44,6 +44,6 @@ describe('get age from fnr', () => {
     const fnr = '10108000398';
     const age = navfaker.personIdentifier.getAge(fnr);
 
-    expect(age).toEqual(44);
+    expect(age).toEqual(45);
   });
 });
