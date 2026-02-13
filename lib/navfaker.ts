@@ -1,6 +1,6 @@
 import DateClass from './date/date';
-import PersonIdentifier from './person-identifier/person-identifier';
 import Person from './person/person';
+import PersonIdentifier from './person-identifier/person-identifier';
 import Random from './random/random';
 
 class NavFaker {

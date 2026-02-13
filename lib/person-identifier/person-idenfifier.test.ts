@@ -12,8 +12,7 @@ test('Generate adult fnr', () => {
   const fnr = navfaker.personIdentifier.adultFnr();
 
   const birthDate = navfaker.personIdentifier.getBirthDate(fnr);
-  const age =
-    new Date(new Date().getTime() - birthDate.getTime()).getFullYear() - 1970;
+  const age = new Date(Date.now() - birthDate.getTime()).getFullYear() - 1970;
 
   expect(age).toBeLessThanOrEqual(100);
   expect(age).toBeGreaterThanOrEqual(18);
